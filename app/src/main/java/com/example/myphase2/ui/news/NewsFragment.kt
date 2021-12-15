@@ -77,10 +77,11 @@ class NewsFragment : Fragment(), NewsItemClicked {
             {
 
             }
-        ) {
+        )
+        {
             override fun getHeaders(): MutableMap<String, String> {
                 val headers = HashMap<String, String>()
-                headers["User-Agent"] = "Mozilla/5.0"
+                headers["User-Agent"] = "Chrome/5.0"
                 return headers
             }
         }
@@ -90,6 +91,5 @@ class NewsFragment : Fragment(), NewsItemClicked {
         val builder = CustomTabsIntent.Builder()
         val customTabsIntent = builder.build()
         customTabsIntent.launchUrl(this.requireContext(), Uri.parse(item.url))
-//        Toast.makeText(this.requireContext(), "Clicked item $item", Toast.LENGTH_SHORT).show()
     }
 }
