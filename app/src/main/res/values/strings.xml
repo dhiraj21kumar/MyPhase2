@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyPhase2</string>
+    <string name="finance_news">Welcome To Finance News</string>
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="title_news">News</string>
+    <string name="title_bookmark">Bookmark</string>
+    <string name="title_profile">Profile</string>
+</resources>
