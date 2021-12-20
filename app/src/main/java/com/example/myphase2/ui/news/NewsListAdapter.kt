@@ -11,27 +11,17 @@ import com.bumptech.glide.Glide
 import com.example.myphase2.R
 import java.util.ArrayList
 
-class NewsListAdapter( private val listner: NewsItemClicked): RecyclerView.Adapter<NewsListAdapter.NewsViewHolder>() {
-
-
-    class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val title: TextView = itemView.findViewById(R.id.NewsTitle)
-        val image: ImageView = itemView.findViewById(R.id.NewsImage)
-        val author: TextView = itemView.findViewById(R.id.NewsAuthor)
-    }
+class NewsListAdapter( private val listner: NewsItemClicked): RecyclerView.Adapter<NewsViewHolder>(){
 
     private val items: ArrayList<News> = ArrayList()
-
-//    inner class NewsViewHolder(val binding: View) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
 
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_news, parent, false)
-        val viewHolder = NewsViewHolder(view)
-        view.setOnClickListener{
-            listner.onItemClicked(items[viewHolder.adapterPosition])
-        }
-            return viewHolder
+        //        view.setOnClickListener{
+//            listner.onItemClicked(items[viewHolder.adapterPosition])
+//        }
+        return NewsViewHolder(view)
 //        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_news, parent, false)
 //        val viewHolder = NewsViewHolder(view)
 //        view.setOnClickListener{
@@ -42,6 +32,9 @@ class NewsListAdapter( private val listner: NewsItemClicked): RecyclerView.Adapt
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val currentItem = items[position]
+//        holder.cardView.setOnClickListener{
+//            listner.onItemClicked(items[holder.adapterPosition])
+//        }
         holder.title.text = currentItem.title
         holder.author.text = currentItem.author
         Glide.with(holder.itemView.context).load(currentItem.imageUrl).into(holder.image)
@@ -61,12 +54,12 @@ class NewsListAdapter( private val listner: NewsItemClicked): RecyclerView.Adapt
         notifyDataSetChanged()
     }
 }
-//
-//class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//    val title: TextView = itemView.findViewById(R.id.NewsTitle)
-//    val image: ImageView = itemView.findViewById(R.id.NewsImage)
-//    val author: TextView = itemView.findViewById(R.id.NewsAuthor)
-//}
+
+class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    val title: TextView = itemView.findViewById(R.id.NewsTitle)
+    val image: ImageView = itemView.findViewById(R.id.NewsImage)
+    val author: TextView = itemView.findViewById(R.id.NewsAuthor)
+}
 
 interface NewsItemClicked {
     fun onItemClicked(item: News)

@@ -43,15 +43,6 @@ class NewsFragment : Fragment(), NewsItemClicked {
         _binding = null
     }
 
-//    private fun fetchData(): ArrayList<String> {
-//        val list = ArrayList<String>()
-//        for (i in 0 until 100){
-//            list.add("Item $i")
-//        }
-//
-//        return list
-//    }
-
     private fun fetchData() {
         val url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=2a469e99aed34f6c95a13af4f855058c"
         Log.d("","")
