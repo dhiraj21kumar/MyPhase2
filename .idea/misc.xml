@@ -20,7 +20,11 @@
         <entry key="app/src/main/res/drawable/rounded_corner.xml" value="0.1455" />
         <entry key="app/src/main/res/drawable/selector_wishlist_item.xml" value="0.1455" />
         <entry key="app/src/main/res/layout/activity_bottom.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fav_item.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_bookmark.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_news.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/item_news.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.2578125" />
