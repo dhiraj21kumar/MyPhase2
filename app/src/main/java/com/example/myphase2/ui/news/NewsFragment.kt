@@ -13,6 +13,9 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.example.myphase2.databinding.FragmentNewsBinding
 import java.util.ArrayList
 import android.util.Log
+import android.widget.CheckBox
+import android.widget.Toast
+import com.example.myphase2.R
 
 class NewsFragment : Fragment(), NewsItemClicked {
 
@@ -36,6 +39,12 @@ class NewsFragment : Fragment(), NewsItemClicked {
         fetchData()
         mAdapter = NewsListAdapter(this)
         binding.recyclerView.adapter = mAdapter
+
+//        var checkboxBookmark = CheckBox(context)
+//        checkboxBookmark.setOnCheckedChangeListener { buttonView, isChecked ->
+//            Toast.makeText(this.requireContext(),isChecked.toString(), Toast.LENGTH_SHORT).show()
+//
+//        }
     }
 
     override fun onDestroyView() {

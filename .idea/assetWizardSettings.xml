@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialiconsoutlined/bookmark_border/outline_bookmark_border_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/manage_search/baseline_manage_search_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_outline_bookmark_border_24" />
+                            <entry key="outputName" value="ic_baseline_manage_search_24" />
                           </map>
                         </option>
                       </PersistentState>

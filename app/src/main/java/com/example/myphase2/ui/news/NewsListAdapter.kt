@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myphase2.R
+import com.example.myphase2.db.DBHelper
 import java.util.ArrayList
 
 class NewsListAdapter( private val listner: NewsItemClicked): RecyclerView.Adapter<NewsViewHolder>(){
@@ -38,6 +40,13 @@ class NewsListAdapter( private val listner: NewsItemClicked): RecyclerView.Adapt
 //        }
         holder.title.text = currentItem.title
         holder.author.text = currentItem.author
+        holder.bookmark.setOnClickListener {
+            val db = DBHelper(holder.itemView.context, null)
+            if(holder.bookmark.isChecked){
+                db.addNews(currentItem.url,currentItem.title,currentItem.author,currentItem.imageUrl)
+            }
+
+        }
         Glide.with(holder.itemView.context).load(currentItem.imageUrl).into(holder.image)
     }
 
@@ -60,6 +69,7 @@ class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val title: TextView = itemView.findViewById(R.id.NewsTitle)
     val image: ImageView = itemView.findViewById(R.id.NewsImage)
     val author: TextView = itemView.findViewById(R.id.NewsAuthor)
+    val bookmark: CheckBox =  itemView.findViewById(R.id.checkboxBookmark)
 }
 
 interface NewsItemClicked {
