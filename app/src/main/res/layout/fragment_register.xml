@@ -46,6 +46,7 @@
             android:background="@drawable/btn_top"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
+            android:layout_marginLeft="35dp"
             android:text="Login"
             android:textColor="@color/white"
             android:textSize="18sp" />
@@ -56,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
             android:text="REGISTER"
             android:textColor="@color/purple_500"
             android:textSize="24sp"
